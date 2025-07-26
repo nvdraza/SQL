@@ -1,7 +1,7 @@
-#Situation:
+# Situation:
 You have been hired as a Data Analyst for the "Taste of the World Cafe" a restaurant that has diverse offering and serving generous portions
 
-#Assignment:
+# Assignment:
 The Taste of the World cafe deubted a new menu at the start of the year.  You have been asked to dig into the customer's data to see which manu items are doing well/not well and what the
 top customer seems to like best
 
