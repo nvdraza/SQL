@@ -40,7 +40,7 @@ ORDER BY price DESC;***
 SELECT* 
 FROM menu_items
 WHERE price = (SELECT Max(price) FROM menu_items)
- ORDER BY Price DESC;***
+ORDER BY Price DESC;***
  
  -- 5. How many Italian dishes are on the menu?
 
