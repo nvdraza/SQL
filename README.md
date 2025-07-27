@@ -156,7 +156,7 @@ ON
 m.menu_item_id =o.item_id
 WHERE order_id =440***
 
---5. View the how many items are ordered from each category
+--5. View how many items are ordered from each category
 
 ***SELECT category, count(item_id) as num_items
 FROM Menu_items m
@@ -167,7 +167,7 @@ m.menu_item_id =o.item_id
 WHERE order_id =440
 Group by category***
 
---6. View the details ofthe  top 5 spend orders
+--6. View the details of the  top 5 spend orders
 ***SELECT order_id, category, count(item_id) as num_items
 FROM Menu_items m
 RIGHT JOIN
@@ -177,4 +177,5 @@ m.menu_item_id =o.item_id
 WHERE order_id IN (440,2075,1957,330,2675)
 Group by category,order_id***
 
-
+# Output
+ We should keep these expensive Italian dishes on our menu because people are ordering them. 
