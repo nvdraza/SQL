@@ -5,9 +5,9 @@ The Taste of the World cafe debuted a new menu at the start of the year.  You ha
 top customers seem to like the best
 
 # Objective 1 :
-1. Explore the menu_items table to get an idea of what's on the new menu
+Explore the menu_items table to get an idea of what's on the new menu
 
---- Exploring menu_items table---
+# Exploring menu_items table
 
 -- 1. View the menu_item table
  
