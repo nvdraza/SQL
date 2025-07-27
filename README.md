@@ -94,8 +94,8 @@ FROM order_details***
 
 --4.	How many items were ordered within this date range
 
-SELECT COUNT(  item_id) 
-FROM order_details
+***SELECT COUNT(  item_id) 
+FROM order_details***
 
 --5. Which order has the most items
 
