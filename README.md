@@ -9,58 +9,54 @@ top customers seem to like the best
 
 --- Exploring menu_items table---
 
-1. View the menu_item table
+-- 1. View the menu_item table
  
 ***SELECT * FROM menu_items***
 
- --updated price column to 2 2 decimal
+ -- updated price column to  2 decimal
 
- UPDATE menu_items
-SET price = ROUND(price, 2);
+ ***UPDATE menu_items
+SET price = ROUND(price, 2);***
 
 
---2. Find the number of items on the menu --
+-- 2. Find the number of items on the menu
 
-SELECT COUNT(*) FROM menu_items
+***SELECT COUNT(*) FROM menu_items***
 
---3. What the least and most expensive item on the menu --
+-- 3. What are the least and most expensive items on the menu
 
-SELECT * FROM menu_items
-ORDER BY price DESC;
+***SELECT * FROM menu_items
+ORDER BY price DESC;***
 
- -- Select only min and max price--
- SELECT* FROM menu_items
+ -- 4. Select only the min and max price
+ 
+ ***SELECT* FROM menu_items
  WHERE price = (SELECT MIN(price) FROM menu_items)
-
  UNION ALL
-
- SELECT* FROM menu_items
- WHERE price = (SELECT Max(price) FROM menu_items)
+SELECT* FROM menu_items
+WHERE price = (SELECT Max(price) FROM menu_items)
+ ORDER BY Price DESC;***
  
- ORDER BY Price DESC;
+ -- 5. How many Italian dishes are on the menu?
 
+ ***SELECT * FROM menu_items
+ WHERE category = 'Italian'***
 
- --- How many italian dishes are on the menu ?
+ --6. What are the least and most expensive Italian dishes on the menu?
 
- SELECT * FROM menu_items
- WHERE category = 'Italian'
-
- --- what are the least and most expensive Italian dishes on menu?
-
- SELECT * FROM menu_items
+***SELECT * FROM menu_items
   WHERE category = 'Italian'
- ORDER BY price DESC
+ ORDER BY price DESC***
 
+ --7. How many dishes are in each category?
+
+ ***SELECT category, count(menu_item_id) as dishes_count FROM menu_items
+ GROUP BY category***
+
+ --8. What is the average dish price of each category?
  
- --- how many dishes in each category?
-
- SELECT category, count(menu_item_id) as dishes_count FROM menu_items
- GROUP BY category
-
- ---What is the average dish price of each category?
- 
- SELECT category, count(menu_item_id) as dishes_count ,round(AVG(price),2) as Average_Dish_Price FROM menu_items
- GROUP BY category
+***SELECT category, count(menu_item_id) as dishes_count ,round(AVG(price),2) as Average_Dish_Price FROM menu_items
+ GROUP BY category***
 
 
 
